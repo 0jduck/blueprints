@@ -9,38 +9,37 @@ body {
 
   font-family: 'Courier Prime', monospace;
   font-size: 15px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 }
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
-a {
-  color: #e8e0c8;
-  text-decoration: none;
-}
-a:hover {
-  color: #212121;
-  text-decoration: underline;
-}
-p {
-  margin: 0;
-  padding-bottom: 15px;
-}
+a {color: #e8e0c8; text-decoration: none;}
+a:hover {color: #212121; text-decoration: underline;}
+h1, p {margin: 0; padding-bottom: 15px;}
 
-/* Header and fotter*/
+/* Header and fotter */
 .header {
   background-color: #026645;
 
   text-align: center;
 
-  gap: 30px;
+  gap: 10px;
   border-bottom: 5px solid #212121;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header h1 {
+  flex-basis: 100%;
 }
 .fotter {
   background-color: #026645;
@@ -54,14 +53,13 @@ p {
 
 /* Window */
 .window {
-  margin: 15px;
   background-color: #e8e0c8;
+  
   border: 5px solid #013d29;
   box-shadow: 5px 5px 0 #013d29;
-}
-.window p {
-  padding-left: 10px;
-  padding-right: 10px;
+
+  margin: 15px;
+  max-width: 500px;
 }
 .window-top {
   margin-bottom: 15px;
@@ -70,24 +68,58 @@ p {
 
   font-size: 20px;
 }
+
+.column:nth-of-type(2) .window {
+  width: 300px;
+  justify-content: flex-start;
+}
+.column:nth-of-type(1) {
+  border-bottom: 2px dashed #212121;
+}
+@media (min-width: 873px) {
+  .column:nth-of-type(1) {
+    border-bottom: none;
+    border-right: 2px dashed #212121;
+  }
+}
+
+.window p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .window a {
   color: #039968;
+
+  font-weight: bold;
+}
+.window button {
+  background-color: #039968;
+  color: #212121;
+  
+  font-weight: bold;
+
+  border: 1px solid #212121;
+  border-radius: 5px;
+
+  margin-left: 5px;
+  margin-bottom: 15px; 
+  padding: 5px;
 }
 
-/* Window logs */
-.window .log {
-  gap: 15px;
-  padding-bottom: 15px;
+.window .image {
   display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.window .log.date {
-  flex-shrink: 0;
+.window .image img {
+  width: 195px;
+  height: auto;
+  border: 5px solid #212121;
+  margin-left: 10px;
 }
-.window .log.text {
+.window .image .text {
   flex: 1;
 }
-
-
 
 
 
