@@ -120,6 +120,8 @@ h1, p {margin: 0; padding-bottom: 15px;}
 .window .image .text {
   flex: 1;
 }
-
+#map p {
+  padding-bottom: 0;
+}
 
 
