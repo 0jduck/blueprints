@@ -50,7 +50,7 @@ async function loadCommits() {
 
   commits.forEach(commit => {
     const li = document.createElement('li');
-    li.textContent = `${commit.commit.author.name}: ${commit.commit.message}`;
+    li.textContent = `${commit.commit.author.name}: ${commit.commit.message.split('\n')[0]}`;
     list.appendChild(li);
   });
   console.log("Commits loaded")
