@@ -1,6 +1,12 @@
 console.log("File elements/elements.js loaded")
 
 document.addEventListener('DOMContentLoaded', () => {
+    loadSidebar();
+    loadCommits();
+});
+
+// load sidebar
+function loadSidebar() {
     ['header', 'fotter', 'sidebar'].forEach(X => {
         const el = document.getElementById(X);
         if (el) {
@@ -33,7 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`Cannot find #${X}`);
         }
     });
-});
+}
+
+// load commits
+async function loadCommits() {
+  console.log("Loading commits");
+  const respose = await fetch("https://api.github.com/repos/0jduck/blueprints/commits?per_page=5&path=root");
+  const commits = await respose.json();
+  const list = document.getElementById("commits-list")
+
+  commits.forEach(commit => {
+    const li = document.createElement('li');
+    li.textContent = `${commit.commit.author.name}: ${commit.commit.message}`;
+    list.appendChild(li);
+  });
+  console.log("Commits loaded")
+}
 
 // background sound
 const backgroundAudio = new Audio('/elements/storm.mp3');
