@@ -24,6 +24,8 @@ body {
 a {color: #e8e0c8; text-decoration: none;}
 a:hover {color: #212121; text-decoration: underline;}
 h1, p {margin: 0; padding-bottom: 15px;}
+ol {padding-inline-start: 1.5em;}
+ol li::marker {content: counter(list-item) " "}
 
 /* Header and fotter */
 .header {
@@ -59,7 +61,7 @@ h1, p {margin: 0; padding-bottom: 15px;}
   box-shadow: 5px 5px 0 #013d29;
 
   margin: 15px;
-  max-width: 500px;
+  width: 500px;
 }
 .window-top {
   margin-bottom: 15px;
@@ -123,5 +125,6 @@ h1, p {margin: 0; padding-bottom: 15px;}
 #map p {
   padding-bottom: 0;
 }
+
 
 
