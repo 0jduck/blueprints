@@ -1,0 +1,9 @@
+{
+  "redirects": [],
+  "rewrites": [
+    {"source": "/**", "destination": "badPath.html"}
+  ],
+  "headers": [
+    {"source": "/404.html", "headers": [{ "key": "Cache-Control", "value": "no-cache" }]}
+  ]
+}
