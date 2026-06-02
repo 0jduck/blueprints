@@ -9,6 +9,9 @@ body {
 
   font-family: 'Courier Prime', monospace;
   font-size: 15px;
+
+  display: flex;
+  flex-direction: column;
 }
 .row {
   display: flex;
