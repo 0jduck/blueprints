@@ -29,17 +29,24 @@
           <p>404 Not Found</p>
         </div>
         <p>How did you get here? Did you find the file in the sidebar map or did you surf a broken link? If it is a broken link or similar please <a href="/index.html#me">reach out</a> about it.</p>
-        <p>Also feel free to use the sidebar map or <a href="/index.html">this link</a> to return to a valid page.<p>
+        <p>Also feel free to use the sidebar map or <a href="/index.html">this link</a> to return to a valid page.</p>
       </div>
 
       <div class="window">
         <div class="window-top">
           <p>Why are you still here?</p>
         </div>
-        <p>Scram, not much more here.</p>
+        <p id="text">Scram, not much more here.</p>
+        <script>
+          const text = document.getElementById("text");
+          setTimeout(() => {text.textContent = "Scram i said! 1";}, 30000);
+          setTimeout(() => {text.textContent = "It goes left, left right...";}, 60000);
+          setTimeout(() => {text.textContent = "The HTML, the raw HTML";}, 90000);
+        </script>
         <!-- I am scared, it is dark. It feels like a maze -->
-        <!-- VGhlIG1hemUsIHRoZSBtYXplLiBJIHJ1biwgaSBuZWVkIHRvIHJ1bg== -->
+        <!-- VGhlIG1hemUsIHRoZSBtYXplLiBJIHJ1biwgaSBuZWVkIHRvIHJ1biwgZnJvbS4uLg== -->
       </div>
+
     </div>
     <div class="column" id="sidebar" style="justify-content: flex-start;">
     </div>
