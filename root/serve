@@ -1,0 +1,5 @@
+# config file
+port 5000
+badPath /badPath.html
+
+
