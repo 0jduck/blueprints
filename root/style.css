@@ -119,7 +119,7 @@ ol li::marker {content: counter(list-item) " "}
 .window .image img {
   width: 195px;
   height: auto;
-  border: 5px solid #212121;
+  border: 5px solid #013d29;
   margin-left: 10px;
 }
 .window .image .text {
